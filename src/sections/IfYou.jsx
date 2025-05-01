@@ -23,7 +23,7 @@ const IfYou = () => {
     return <section className="relative pt-[7.75vw] px-[13vw] pb-[8.25vw] text-white rounded-[7.5vw] overflow-hidden">
         <Image fileName="if-you-bg.jpg" className="absolute size-full inset-0 object-cover" />
         <div className="relative">
-            <h2 className="font-unbounded uppercase font-semibold text-[5.5vw] leading-[6vw] mb-[8.25vw]">
+            <h2 className="font-unbounded uppercase font-semibold text-[5.5vw] leading-[6vw] mb-[8.25vw] text-center">
                 Онлайн-інтенсив <span className="text-transparent bg-clip-text bg-[linear-gradient(121deg,#00D16F_32.06%,#156640_83.82%)]">для тебе, якщо ти:</span>
             </h2>
             <ul className="flex flex-col space-y-[6vw] mb-[10vw]">

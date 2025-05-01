@@ -95,7 +95,7 @@ const Btn = ({ children, tg = false, className = "", ...props }) => {
                 </>
             )
         }
-        <span className="relative z-10 block p-[3.75vw_1vw_3vw_3vw] font-semibold mx-auto">{children}</span>
+        <span className="relative z-10 block p-[3.75vw_1vw_3vw_1vw] w-full text-center font-semibold">{children}</span>
     </a>
 }
 

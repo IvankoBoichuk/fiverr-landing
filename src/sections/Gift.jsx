@@ -5,7 +5,7 @@ const Gift = () => {
             <Image fileName="icon-gift.png" className="w-[4.5vw]" />
         </div>
         <h2 className="font-unbounded uppercase font-semibold text-[5vw] leading-[5.5vw]">
-            Бонус для тих, хто доєднається <span className="block text-transparent bg-clip-text bg-[linear-gradient(90deg,#1DBF73_0%,#156640_100%)]" >сьогодні:</span>
+            Бонус для тих, <br /> хто доєднається <span className="block text-transparent bg-clip-text bg-[linear-gradient(90deg,#1DBF73_0%,#156640_100%)]" >сьогодні:</span>
         </h2>
         <span className="-rotate-1 rounded-xl h-[8vw] w-[67.5vw] flex justify-center items-center font-bad text-[3.5vw] text-white
             bg-[linear-gradient(124deg,#1DBF73_-5.02%,#156640_101.25%)]

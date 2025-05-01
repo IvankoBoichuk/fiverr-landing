@@ -2,7 +2,7 @@ import Image from "../components/Image/Image";
 
 const Bell = () => {
     return <section className="bg-white rounded-[20px] -my-[20px] relative z-10 pb-[8.75vw]">
-        <div className="flex justify-center py-[1.5vw]"><Image fileName="bell.png" /></div>
+        <div className="flex justify-center py-[4vw]"><Image fileName="bell.png" /></div>
         <div style={{
             background: "linear-gradient(124deg, #1DBF73 -5.02%, #156640 101.25%)",
             boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
