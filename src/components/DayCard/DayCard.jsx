@@ -27,8 +27,8 @@ const DayCard = ({ day, title, icon, points }) => {
     const icons = icon.split('+');
 
     return (
-        <div className="relative w-[84.75vw]">
-            <img src="/images/days-bg.svg" width={339} height={139} className="w-[84.75vw] h-[34.75vw] absolute top-0 left-0" alt="#" />
+        <div className="relative w-[84.75vw] h-[34.75vw]">
+            <img src="/images/days-bg.svg" width={339} height={139} className="absolute inset-0 size-full object-bottom" alt="#" />
             <div className="relative">
                 <div className="flex flex-col items-center font-unbounded font-bold text-[3.32vw] pt-[2vw] pb-[1vw]">
                     <span className="text-transparent bg-clip-text bg-[linear-gradient(164deg,#1DBF73_19%,#156640_104%)]">{day}</span>
