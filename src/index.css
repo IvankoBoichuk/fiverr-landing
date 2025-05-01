@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-unbounded: "Unbounded";
+  --font-codec: "Codec Pro";
+  --font-bad: "Bad Script";
+  --font-benzin: "Benzin";
+  --color-brand-green: #00D672;
+  --color-brand-black: #242424;
+}
+
+:root {
+  --swiper-navigation-sides-offset: -10vw
+}
+
+body {
+  color: #242424;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  height: 45.795px;
+  width: 27.718px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyMCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlBvbHlnb24gMjUiIGQ9Ik0xNy45MjY2IDEwLjcwNDFDMTkuODY1NCAxMi41NTM0IDE5Ljg2NTQgMTUuNjQ3NyAxNy45MjY2IDE3LjQ5N0w4LjYzMjU5IDI2LjM2MjVDNS42NDUxNCAyOS4yMTIxIDAuNjk4ODQzIDI3LjA5NDYgMC42OTg4NDMgMjIuOTY2TDAuNjk4ODQzIDUuMjM1MTVDMC42OTg4NDMgMS4xMDY1MyA1LjY0NTE0IC0xLjAxMTAxIDguNjMyNiAxLjgzODY3TDE3LjkyNjYgMTAuNzA0MVoiIGZpbGw9IiMyNDI0MjQiLz4KPC9zdmc+Cg==")
+}
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyMCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlBvbHlnb24gMjQiIGQ9Ik0yLjA3MzYzIDE3LjExNjJDMC4xMzQ4OTIgMTUuMjY2OSAwLjEzNDg5NCAxMi4xNzI2IDIuMDczNjMgMTAuMzIzM0wxMS4zNjc3IDEuNDU3ODZDMTQuMzU1MSAtMS4zOTE4MiAxOS4zMDE0IDAuNzI1NzI3IDE5LjMwMTQgNC44NTQzNUwxOS4zMDE0IDIyLjU4NTJDMTkuMzAxNCAyNi43MTM4IDE0LjM1NTEgMjguODMxMyAxMS4zNjc2IDI1Ljk4MTZMMi4wNzM2MyAxNy4xMTYyWiIgZmlsbD0iIzI0MjQyNCIvPgo8L3N2Zz4K")
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  opacity: 0;
+  pointer-events: none;
+  @apply transition-opacity;
+}
+.swiper-slide.swiper-slide-active {
+  opacity: 1;
+  pointer-events: all;
+  @apply transition-opacity;
+}
