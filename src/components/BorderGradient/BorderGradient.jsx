@@ -1,16 +1,16 @@
-const BorderGradient = ({ radius, gradient, children, ...props }) => {
+import './GradientBorderMask.css';
+const BorderGradient = ({ children, radius = '12px', padding = '0', gradient = '45deg, purple, orange', className = '', ...props }) => {
     return (
-        <div className="rounded-sm overflow-hidden w-max">
-            <div
-                {...props}
-                style={{
-                    overflow: "hidden",
-                    border: '1px solid',
-                    borderImage: `linear-gradient(${gradient} 1`,
-                }}
-            >
-                {children}
-            </div>
+        <div
+            className={`gradient-border-mask ${className}`}
+            style={{
+                '--radius': radius,
+                '--padding': padding,
+                '--gradient': gradient,
+            }}
+            {...props}
+        >
+            {children}
         </div>
     );
 };

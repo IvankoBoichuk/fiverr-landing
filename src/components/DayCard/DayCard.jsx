@@ -19,8 +19,8 @@ const wrapInSpan = (text) => {
 
 const DayCard = ({ day, title, icon, points }) => {
     const renderIcon = (type) => {
-        if (type === 'star') return <div className="flex-none"><Image fileName="star-green.png" /></div>;
-        if (type === 'gift') return <div className="flex-none"><Image fileName="icon-gift.png" /></div>;
+        if (type === 'star') return <div className="flex-none"><Image fileName="star-green.png" className="w-[4.5vw]" /></div>;
+        if (type === 'gift') return <div className="flex-none"><Image fileName="icon-gift.png" className="w-[4.5vw]" /></div>;
         return null;
     };
 
@@ -39,7 +39,7 @@ const DayCard = ({ day, title, icon, points }) => {
                         day == 1 ? <div className="flex items-center justify-between pr-[5.25vw] h-[24.75vw]">
                             <div className="flex items-center gap-[2vw]">
                                 <div className="flex-none w-[6vw]">
-                                    <Image fileName="gift-big.png"></Image>
+                                    <Image fileName="gift-big.png" className="w-[6vw]"></Image>
                                 </div>
                                 <h3 className="font-codec font-medium text-[3.75vw] w-[20vw]">{title}</h3>
                             </div>
@@ -48,7 +48,7 @@ const DayCard = ({ day, title, icon, points }) => {
                             </svg>
                             <ul className="w-[30.5vw]">
                                 {points.map((point, idx) => (
-                                    <li key={idx} className="font-bad">{point}</li>
+                                    <li key={idx} className="font-bad text-[3.75vw]">{point}</li>
                                 ))}
                             </ul>
                         </div> : <div className="flex items-center justify-between pr-[5.25vw] h-[24.75vw]">

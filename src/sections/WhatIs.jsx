@@ -43,9 +43,9 @@ const WhatIs = () => {
             {data.map((el, index) => (
                 <li key={index} className="flex items-center gap-[3.75vw]">
                     <div className="flex-none w-[55.25vw] h-[15.5vw] flex items-center bg-[#21252D] px-[3.5vw] rounded-[10px]">
-                        <div className="font-unbounded font-bold text-white leading-none text-[3.25vw] uppercase">{wrapInSpan(el.name)}</div>
+                        <div className="font-unbounded font-bold text-white text-[3.25vw] uppercase">{wrapInSpan(el.name)}</div>
                     </div>
-                    <div className="font-codec font-medium text-[3.25vw] text-[#545454]/85 leading-none">* {el.notice}</div>
+                    <div className="font-codec font-medium text-[3.25vw] text-[#545454]/85">* {el.notice}</div>
                 </li>
             ))}
         </ul>

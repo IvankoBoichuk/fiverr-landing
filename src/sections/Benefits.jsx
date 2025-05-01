@@ -30,10 +30,13 @@ const IfYou = () => {
                 {data.map((el, index) => (
                     <li key={index} className="flex justify-center text-center">
                         <BorderGradient
-                            gradient="130deg, #1DBF73 21.45%, rgba(45, 45, 45, 0.68) 90.89%)"
-                            className="w-[62.5vw] pt-[3vw] flex flex-col items-center bg-[#191919]/61 backdrop-blur-[5px] rounded-[8px]">
-                            <span className="rounded-lg bg-[linear-gradient(90deg,#1DBF73_0%,#00743D_100%)] h-[6.25vw] leading-[6.25vw] w-[45.75vw] uppercase text-white font-unbounded font-bold text-[3vw] mb-[3vw]">{el.name}</span>
-                            <p className="font-codec font-light text-[3.13vw] leading-none text-balance pl-[3.13vw] pr-[3.38vw] pb-[2.5vw]">{el.text}</p>
+                            radius="8px"
+                            gradient="130deg, #1DBF73 21%, rgba(45, 45, 45, 0.68) 90%"
+                            className="w-[62.5vw] bg-[#191919]/61 backdrop-blur-[5px]">
+                            <div className="pt-[3vw] flex flex-col items-center">
+                                <span className="rounded-lg bg-[linear-gradient(90deg,#1DBF73_0%,#00743D_100%)] h-[6.25vw] leading-[6.25vw] w-[45.75vw] uppercase text-white font-unbounded font-bold text-[3vw] mb-[3vw]">{el.name}</span>
+                                <p className="font-codec font-light text-[3.13vw] text-balance pl-[3.13vw] pr-[3.38vw] pb-[2.5vw]">{el.text}</p>
+                            </div>
                         </BorderGradient>
                     </li>
                 ))}

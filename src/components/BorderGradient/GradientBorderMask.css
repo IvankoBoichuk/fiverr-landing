@@ -1,0 +1,29 @@
+.gradient-border-mask {
+    display: flow-root;
+    position: relative;
+    padding: var(--padding);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  
+  .gradient-border-mask .content {
+    position: relative;
+    z-index: 1;
+    border-radius: var(--radius);
+    background-color: #121212; /* або будь-який внутрішній фон */
+  }
+  
+  .gradient-border-mask::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    background: linear-gradient(var(--gradient)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: 2;
+    pointer-events: none;
+  }
+  

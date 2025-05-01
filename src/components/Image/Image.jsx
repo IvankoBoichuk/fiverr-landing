@@ -1,4 +1,4 @@
-const Image = ({ fileName, alt, ...props }) => {
+const Image = ({ fileName, alt, loading = "lazy", ...props }) => {
     if (!fileName || !fileName.includes('.')) {
         console.error('Invalid fileName passed to <Image /> component');
         return null;
@@ -16,6 +16,7 @@ const Image = ({ fileName, alt, ...props }) => {
                 src={`/images/${name}.${format}`}
                 srcSet={`/images/${name}.${format} 1x, /images/${name}@2x.${format} 2x`}
                 alt={alt ?? name}
+                loading={loading}
                 {...props}
             />
         </picture>

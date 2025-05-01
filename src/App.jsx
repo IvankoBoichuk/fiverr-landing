@@ -11,6 +11,10 @@ import Program from './sections/Program'
 import Results from './sections/Results'
 import Reviews from './sections/Reviews'
 import Procces from './sections/Procces'
+import Refund from './sections/Refund'
+import Price from './sections/Price'
+import Faq from './sections/Faq'
+import Payment from './sections/Payment'
 
 function App() {
   return (
@@ -25,8 +29,12 @@ function App() {
       <Program />
       <Results />
       <Benefits />
-      <Reviews />
       <Procces />
+      <Refund />
+      <Price />
+      <Reviews />
+      <Faq />
+      <Payment />
     </>
   )
 }
