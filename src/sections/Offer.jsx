@@ -1,7 +1,77 @@
+import { useState, useEffect } from "react";
 import Btn from "../components/Btn/Btn"
 import Image from "../components/Image/Image"
 import BorderGradient from "../components/BorderGradient/BorderGradient"
+
+const generateRandomPlaces = (min, max) => {
+    const adjustedMax = max - 2;
+    return Math.floor(Math.random() * (adjustedMax - min + 1)) + min;
+};
+
+const getInitialData = () => {
+    const max = 30;
+    const min = 20;
+    const storedStartDate = localStorage.getItem("startDate");
+    const storedPlaces = localStorage.getItem("startPlaces");
+
+    if (storedStartDate && storedPlaces) {
+        return {
+            startDate: new Date(storedStartDate),
+            startPlaces: parseInt(storedPlaces, 10),
+        };
+    }
+
+    const newStartDate = new Date();
+    const newStartPlaces = generateRandomPlaces(min, max); // від 20 до 30
+
+    localStorage.setItem("startDate", newStartDate.toISOString());
+    localStorage.setItem("startPlaces", newStartPlaces.toString());
+
+    return {
+        startDate: newStartDate,
+        startPlaces: newStartPlaces,
+    };
+};
+
+const useCurrentPlaces = () => {
+    const [places, setPlaces] = useState(0);
+
+    useEffect(() => {
+        const { startDate, startPlaces } = getInitialData();
+
+        const updatePlaces = () => {
+            const now = new Date();
+            const hoursPassed = Math.floor((now.getTime() - startDate.getTime()) / (1000 * 60 * 60));
+            const current = Math.max(0, startPlaces - hoursPassed);
+            setPlaces(current);
+        };
+
+        updatePlaces();
+        const interval = setInterval(updatePlaces, 1000 * 60); // оновлюй щохвилини
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return places;
+};
+
+const DateRange = () => {
+    const formatDate = (date) => {
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        return `${day}.${month}`;
+    };
+
+    const today = new Date();
+    const inSixDays = new Date();
+    inSixDays.setDate(today.getDate() + 7);
+
+    return <>{formatDate(today)} - {formatDate(inSixDays)}</>;
+};
+
 const Offer = () => {
+    const places = useCurrentPlaces();
+
     return <section className="relative pt-[31vw] text-white rounded-b-[7.5vw] overflow-hidden bg-gray-800">
         <Image fileName="offer-bg.jpg" className="absolute size-full inset-0 object-cover" loading="eager" />
         <div className="pl-[10vw] relative">
@@ -13,7 +83,7 @@ const Offer = () => {
                         gradient="132deg, #00D270 -15%, rgba(18, 18, 18) 80%">
                         <div className="w-[30.5vw] h-[8.75vw] flex items-center justify-center gap-[1.5vw]">
                             <Image fileName="calendar.png" className="w-[4.75vw]" />
-                            <span className="font-codec font-light text-[3.5vw]">8-денний</span>
+                            <span className="font-codec font-light text-[3.5vw] uppercase pt-[1vw]">8-денний</span>
                         </div>
                     </BorderGradient>
                     <div className="flex flex-col">
@@ -33,7 +103,7 @@ const Offer = () => {
                     radius="4px"
                     gradient="132deg, #00D270 -15%, rgba(18, 18, 18) 80%">
                     <div className="w-[36.75vw] h-[8.75vw] flex items-center justify-center gap-[1.5vw]">
-                        <span className="font-codec font-light text-[3.5vw]">Дата: 01.06-08.06</span>
+                        <span className="font-codec font-light text-[3.5vw]">Дата: <DateRange /></span>
                     </div>
                 </BorderGradient>
                 <BorderGradient
@@ -41,7 +111,7 @@ const Offer = () => {
                     radius="4px"
                     gradient="132deg, #00D270 -15%, rgba(18, 18, 18) 80%">
                     <div className="w-[36.75vw] h-[8.75vw] flex items-center justify-center gap-[1.5vw]">
-                        <span className="font-codec font-light text-[3.5vw]"><span className="text-brand-green">Вільні місця:</span> 22/30</span>
+                        <span className="font-codec font-light text-[3.5vw]"><span className="text-brand-green">Вільні місця:</span> {places}/30</span>
                     </div>
                 </BorderGradient>
             </div>
@@ -52,11 +122,9 @@ const Offer = () => {
                     gradient={"264deg, #00D672 -4%, rgba(0, 0, 0, 0.40) 56%"}>
                     <div className="flex flex-col pt-[2.5vw] pl-[53vw] w-[76.5vw] h-[14.25vw]">
                         <span className="font-light text-[3vw] scale-[0.6667] origin-top-left">зі знижкою:</span>
-                        <span className="text-[4vw] font-semibold text-transparent bg-clip-text bg-[linear-gradient(121deg,#00D16F_32.06%,#156640_83.82%)]">390 грн</span>
-                        <span className="text-[2vw] text-[#D3D3D3]/45 relative ml-[4.25vw]">1590 грн
-                            <svg className="w-[16.5vw] absolute left-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="66" height="2" viewBox="0 0 66 2" fill="none">
-                                <path d="M1 1.5L65 0.5" stroke="white" strokeLinecap="round" />
-                            </svg>
+                        <span className="font-semibold text-[4vw] text-transparent bg-clip-text bg-[linear-gradient(121deg,#00D16F_32.06%,#156640_83.82%)]">390 грн</span>
+                        <span className="font-light text-[3vw] text-[#D3D3D3]/45 relative ml-[4.25vw] w-max">1590 грн
+                            <div className="w-full absolute left-0 top-1/2 -translate-y-1/2 h-px bg-[#FFFFFF] rotate-1"></div>
                         </span>
                     </div>
                 </BorderGradient>
