@@ -96,7 +96,7 @@ const Offer = () => {
                 </h1>
                 <div className="mt-[2vw] -mb-[2vw]">
                     <span className="font-bad text-[4.25vw] w-[43vw] -rotate-[4deg] block -mb-[8vw]">підходить для спеціалістів у будь-яких нішах</span>
-                    <Image fileName="offer-line.png" className="ml-2 w-[33.75vw]" />
+                    <Image fileName="offer-line.png" className="ml-2 w-[33.75vw]" width="135" height="74" />
                 </div>
                 <BorderGradient
                     className="mb-[3vw] bg-black/45 backdrop-blur-xs w-max"
@@ -130,7 +130,7 @@ const Offer = () => {
                 </BorderGradient>
             </div>
         </div>
-        <Image fileName="kate-offer.png" className="absolute right-0 bottom-[11vw] w-[63.75vw]" loading="eager" />
+        <Image width="255" height="477" fileName="kate-offer.png" className="absolute right-0 bottom-[11vw] w-[63.75vw]" loading="eager" />
         <svg className="mx-auto mt-[2.75vw] w-[26vw] relative z-10" xmlns="http://www.w3.org/2000/svg" width="104" height="71" viewBox="0 0 104 71" fill="none">
             <g filter="url(#filter0_f_0_150)">
                 <path d="M82 24L55.3448 47.9897C53.4433 49.701 50.5567 49.701 48.6552 47.9897L22 24" stroke="#00F180" strokeWidth="4" strokeLinecap="round" />

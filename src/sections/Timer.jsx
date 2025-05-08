@@ -3,33 +3,46 @@ import { useEffect, useRef, useState } from 'react';
 const formatTime = (val) => String(val).padStart(2, '0');
 
 const Timer = () => {
-    const initialTime = 60 * 60 * 2; // 2 години в секундах (наприклад)
-    const [timeLeft, setTimeLeft] = useState(initialTime);
+    const initialTime = 60 * 60 * 2; // 2 години
+    const [timeLeft, setTimeLeft] = useState(() => {
+        const saved = localStorage.getItem('timer-timeLeft');
+        return saved !== null ? parseInt(saved, 10) : initialTime;
+    });
     const [isSticky, setIsSticky] = useState(true);
-    const [isPaused, setIsPaused] = useState(false);
+    const [isPaused, setIsPaused] = useState(() => {
+        const saved = localStorage.getItem('timer-isPaused');
+        return saved === 'true'; // true or false as string
+    });
     const intervalRef = useRef(null);
 
-    // запускаємо або зупиняємо таймер
+    // Збереження значень у localStorage при зміні
     useEffect(() => {
-        if (!isPaused) {
+        localStorage.setItem('timer-timeLeft', timeLeft);
+    }, [timeLeft]);
+
+    useEffect(() => {
+        localStorage.setItem('timer-isPaused', isPaused);
+    }, [isPaused]);
+
+    // запуск/зупинка таймера
+    useEffect(() => {
+        if (!isPaused && timeLeft > 0) {
             intervalRef.current = setInterval(() => {
-                setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+                setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
             }, 1000);
         }
 
         return () => clearInterval(intervalRef.current);
     }, [isPaused]);
 
-    const handlePause = () => {
-        setIsPaused(true);
-    };
-
-    const handleResume = () => {
-        setIsPaused(false);
-    };
-
+    const handlePause = () => setIsPaused(true);
+    const handleResume = () => setIsPaused(false);
     const handleReset = () => {
         setIsSticky(false);
+        setTimeLeft(initialTime);
+        setIsPaused(false);
+        localStorage.removeItem('timer-timeLeft');
+        localStorage.removeItem('timer-isPaused');
     };
 
     const hours = Math.floor(timeLeft / 3600);
@@ -57,7 +70,7 @@ const Timer = () => {
                 </button>
             )}
 
-            {isSticky && 
+            {isSticky &&
                 <button onClick={handleReset} className="mr-[2vw]" id="timer-remove">
                     {/* remove icon */}
                     <svg className="size-[10.75vw]" xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36" fill="none">

@@ -3,20 +3,20 @@ const Image = ({ fileName, alt, loading = "lazy", ...props }) => {
         console.error('Invalid fileName passed to <Image /> component');
         return null;
     }
-
+    const folder = "raw";
     const [name, format] = fileName.split(".");
-
     return (
         <picture>
-            {/* <source 
-          srcSet={`/images/${name}.webp 1x, /images/${name}@2x.webp 2x`} 
-          type="image/webp" 
-        /> */}
+            <source 
+                srcSet={`/images/${folder}/${name}.webp 1x, /images/${folder}@2x/${name}.webp 2x`} 
+                type="image/webp" 
+            />
             <img
-                src={`/images/${name}.${format}`}
-                srcSet={`/images/${name}.${format} 1x, /images/${name}@2x.${format} 2x`}
+                src={`/images/${folder}/${name}.${format}`}
+                srcSet={`/images/${folder}/${name}.${format} 1x, /images/${folder}@2x/${name}.${format} 2x`}
                 alt={alt ?? name}
                 loading={loading}
+                fetchPriority={loading == "eager" ? "high" : "low"}
                 {...props}
             />
         </picture>

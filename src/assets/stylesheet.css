@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('/fonts/subset/CodecPro-BoldItalic.woff2') format('woff2'),
+        url('/fonts/subset/CodecPro-BoldItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('/fonts/subset/Benzin-Regular.woff2') format('woff2'),
+        url('/fonts/subset/Benzin-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Benzin';
+    src: url('/fonts/subset/Benzin-Bold.woff2') format('woff2'),
+        url('/fonts/subset/Benzin-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bad Script';
+    src: url('/fonts/subset/BadScript-Regular.woff2') format('woff2'),
+        url('/fonts/subset/BadScript-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('/fonts/subset/Unbounded-Regular.woff2') format('woff2'),
+        url('/fonts/subset/Unbounded-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('/fonts/subset/Unbounded-Light.woff2') format('woff2'),
+        url('/fonts/subset/Unbounded-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('/fonts/subset/CodecPro-Bold.woff2') format('woff2'),
+        url('/fonts/subset/CodecPro-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('/fonts/subset/CodecPro-Heavy.woff2') format('woff2'),
+        url('/fonts/subset/CodecPro-Heavy.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('/fonts/subset/Unbounded-SemiBold.woff2') format('woff2'),
+        url('/fonts/subset/Unbounded-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('/fonts/subset/Unbounded-Bold.woff2') format('woff2'),
+        url('/fonts/subset/Unbounded-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('/fonts/subset/CodecPro-Regular.woff2') format('woff2'),
+        url('/fonts/subset/CodecPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('/fonts/subset/CodecPro-ExtraLight.woff2') format('woff2'),
+        url('/fonts/subset/CodecPro-ExtraLight.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('/fonts/subset/CodecPro-Light.woff2') format('woff2'),
+        url('/fonts/subset/CodecPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

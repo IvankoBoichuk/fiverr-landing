@@ -16,9 +16,11 @@ const Speaker = () => {
                     boxShadow: "0px 4.376px 4.376px 0px rgba(0, 0, 0, 0.25)"
                 }}>
                     <img
-                        src={`/images/reviews.jpg`}
-                        srcSet={`/images/reviews.jpg 1x, /images/reviews@2x.jpg 2x`}
+                        src={`/images/raw/reviews.jpg`}
+                        srcSet={`/images/raw/reviews.jpg 1x, /images/raw@2x/reviews.jpg 2x`}
                         alt="reviews"
+                        loading="lazy"
+                        fetchPriority="low"
                         className="w-[23.75vw] rounded-[5px] h-auto"
                     />
                 </div>
@@ -34,9 +36,11 @@ const Speaker = () => {
                     boxShadow: "0px 4.376px 4.376px 0px rgba(0, 0, 0, 0.25)"
                 }}>
                     <img
-                        src={`/images/design-team.jpg`}
-                        srcSet={`/images/design-team.jpg 1x, /images/design-team@2x.jpg 2x`}
+                        src={`/images/raw/design-team.jpg`}
+                        srcSet={`/images/raw/design-team.jpg 1x, /images/raw@2x/design-team.jpg 2x`}
                         alt="design-team"
+                        loading="lazy"
+                        fetchPriority="low"
                         className="w-[28.25vw] rounded-[5px] h-auto"
                     />
                 </div>
