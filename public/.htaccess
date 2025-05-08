@@ -1,14 +1,8 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-
-  # Ігноруємо прямий доступ до index.html
   RewriteRule ^index\.html$ - [L]
-
-  # Якщо файл або директорія не існує
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-
-  # Перенаправляємо все на dist/index.html
-  RewriteRule ^.*$ /dist/index.html [L]
+  RewriteRule . /index.html [L]
 </IfModule>
