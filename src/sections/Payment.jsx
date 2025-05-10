@@ -11,8 +11,8 @@ const Payment = () => {
         </h2>
         <Btn tg className="text-[4.5vw] h-[19vw] leading-[5.5vw] w-[68.5vw] mx-auto mb-[20vw]">ЗАДАТИ ПИТАННЯ <br /> В ТГ</Btn>
         <ul className="mb-[5vw] text-center text-[#838383] font-codec font-light space-y-[1.5vw]">
-            <li><a href="/oferta.html">ПУБЛІЧНИЙ ДОГОВІР (ОФЕРТА)</a></li>
-            <li><a href="/privacy-policy.html">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a></li>
+            <li><a target="_blank" href="/oferta.html">ПУБЛІЧНИЙ ДОГОВІР (ОФЕРТА)</a></li>
+            <li><a target="_blank" href="/privacy-policy.html">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a></li>
         </ul>
         <div className="bg-[linear-gradient(90deg,#1DBF73_0%,#156640_100%)] p-0.5 rounded-[8px] w-max mx-auto">
             <Image fileName="payments.jpg" className="rounded-[6px] w-[80vw]" />
