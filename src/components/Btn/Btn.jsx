@@ -1,7 +1,7 @@
 import css from "./Btn.module.css";
 
 const Btn = ({ children, tg = false, className = "", ...props }) => {
-    return <a href="#" {...props} className={`relative text-white z-10
+    return <a href={tg ? "https://t.me/JeiRet_Team" : "https://secure.wayforpay.com/payment/fiverrmini"} target="_blank" {...props} className={`relative text-white z-10
         uppercase font-unbounded text-center
         w-[51vw] h-[14.25vw] flex items-center text-[3.5vw] ${className}`}>
         <span className={`z-10 rounded-[11px] absolute inset-x-0 size-full top-0 ${tg ? css.btnTg : css.btn}`}></span>

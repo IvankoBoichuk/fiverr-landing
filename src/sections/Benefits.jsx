@@ -41,6 +41,7 @@ const IfYou = () => {
                     </li>
                 ))}
             </ul>
+            <Btn className="text-[4.5vw] h-[19vw] leading-[5.5vw] w-[68.5vw] mx-auto">отримати ДОСТУП ЗА 390 ГРН</Btn>
         </div>
         <Image fileName="verified.png" className="absolute h-[10vw] blur-[1px] top-[24vw] left-[14vw]" />
         <Image fileName="benefits-check.png" className="absolute h-[25.75vw] bottom-[57vw] left-0" />
