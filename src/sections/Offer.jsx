@@ -111,7 +111,7 @@ const Offer = () => {
                     radius="4px"
                     gradient="132deg, #00D270 -15%, rgba(18, 18, 18) 80%">
                     <div className="w-[36.75vw] h-[8.75vw] flex items-center justify-center gap-[1.5vw]">
-                        <span className="font-codec font-light text-[3.5vw]"><span className="text-brand-green">Вільні місця:</span> {places}/50</span>
+                        <span className="font-codec font-light text-[3.5vw]"><span className="text-brand-green">Вільні місця:</span> 3/50</span>
                     </div>
                 </BorderGradient>
             </div>
