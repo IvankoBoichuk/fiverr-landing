@@ -3,7 +3,7 @@ const Speaker = () => {
     return <section className="pt-[6.5vw]">
         <div className="h-[16vw] w-[80.5vw] mx-auto">
             <h2 className="text-[5.5vw] leading-[6vw] mx-auto text-center font-benzin font-bold uppercase">спікер курсу</h2>
-            <h2 className="text-[5.5vw] leading-[7vw] mx-auto text-center font-benzin font-bold uppercase"><span className="block bg-[linear-gradient(90deg,#1DBF73_0%,#156640_100%)] bg-clip-text text-transparent">Катя Михайлова</span></h2>
+            <h2 className="text-[5.5vw] leading-[7vw] mx-auto text-center font-benzin font-bold uppercase"><span className="block bg-[linear-gradient(90deg,#1DBF73_0%,#156640_100%)] bg-clip-text text-transparent">Катя Князєва</span></h2>
         </div>
         <Image fileName="kate-speaker.jpg" className="m-auto mb-[6.25vw] w-[84.5vw]" />
         <ul className="space-y-[7.25vw] mb-[9.25vw]">

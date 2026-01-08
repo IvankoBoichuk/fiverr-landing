@@ -33,7 +33,7 @@ const Thankyou = () => {
             width={203}
             height={203}
         />
-        <a href="https://t.me/JeiRet_Team" target="_blank" className='w-[49.5vw] mx-auto flex flex-col items-center'>
+        <a href="https://t.me/Kate_JeiRet" target="_blank" className='w-[49.5vw] mx-auto flex flex-col items-center'>
             <div className="bg-[#FFA7C1] rounded-[1.5vw] py-[1.25vw] px-[2.25vw] mb-[5vw]">
                 <svg width="168" height="26" viewBox="0 0 168 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.7065 0.340729V8.99999H14.2839V5.84554H12.9108L10.8202 8.99999H9.21208L11.414 5.72184C10.845 5.54866 10.3749 5.2229 10.0038 4.74458C9.64092 4.25801 9.45949 3.71784 9.45949 3.12406C9.45949 2.34885 9.72751 1.69322 10.2636 1.15717C10.8079 0.612877 11.4676 0.340729 12.2428 0.340729H15.7065ZM12.2428 4.5714H14.2839V1.67673H12.2428C11.8635 1.67673 11.5418 1.81693 11.2779 2.09732C11.014 2.37772 10.8821 2.71996 10.8821 3.12406C10.8821 3.52816 11.014 3.87041 11.2779 4.1508C11.5418 4.4312 11.8635 4.5714 12.2428 4.5714Z" fill="white" />
